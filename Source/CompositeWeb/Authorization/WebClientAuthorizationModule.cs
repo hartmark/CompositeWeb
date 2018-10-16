@@ -29,15 +29,15 @@ namespace Microsoft.Practices.CompositeWeb.Authorization
 	/// </summary>
 	public class WebClientAuthorizationModule : IHttpModule
 	{
-		#region IHttpModule Members
+        #region IHttpModule Members
 
-		/// <summary>
-		/// Initializes the HTTP module.
-		/// </summary>
-		/// <param name="context">The <see cref="HttpApplication"/> hosting this HTTP module.</param>
-		/// <remarks>If the <paramref name="httpApplication"/> defines a Root Container, then this HTTP module will handle
-		/// the <see cref="HttpApplication.AuthorizeRequest"/> event.</remarks>
-		[SuppressMessage("Microsoft.Design", "CA1062:ValidateArgumentsOfPublicMethods",
+        /// <summary>
+        /// Initializes the HTTP module.
+        /// </summary>
+        /// <param name="context">The <see cref="HttpApplication"/> hosting this HTTP module.</param>
+        /// <remarks>If the <paramref name="context"/> defines a Root Container, then this HTTP module will handle
+        /// the <see cref="HttpApplication.AuthorizeRequest"/> event.</remarks>
+        [SuppressMessage("Microsoft.Design", "CA1062:ValidateArgumentsOfPublicMethods",
 			Justification = "Validation done by Guard class.")]
 		public void Init(HttpApplication context)
 		{
